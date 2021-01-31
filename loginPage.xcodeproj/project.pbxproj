@@ -11,6 +11,7 @@
 		55DAB1A925C6CFB700D70859 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAB1A825C6CFB700D70859 /* ContentView.swift */; };
 		55DAB1AB25C6CFB800D70859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DAB1AA25C6CFB800D70859 /* Assets.xcassets */; };
 		55DAB1AE25C6CFB800D70859 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DAB1AD25C6CFB800D70859 /* Preview Assets.xcassets */; };
+		55DAB1B925C70CD700D70859 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAB1B825C70CD700D70859 /* FeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		55DAB1AA25C6CFB800D70859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55DAB1AD25C6CFB800D70859 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		55DAB1AF25C6CFB800D70859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55DAB1B825C70CD700D70859 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		55DAB1A525C6CFB700D70859 /* loginPage */ = {
 			isa = PBXGroup;
 			children = (
+				55DAB1B825C70CD700D70859 /* FeedView.swift */,
 				55DAB1A625C6CFB700D70859 /* loginPageApp.swift */,
 				55DAB1A825C6CFB700D70859 /* ContentView.swift */,
 				55DAB1AA25C6CFB800D70859 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55DAB1A925C6CFB700D70859 /* ContentView.swift in Sources */,
+				55DAB1B925C70CD700D70859 /* FeedView.swift in Sources */,
 				55DAB1A725C6CFB700D70859 /* loginPageApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +284,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iHouse.loginPage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +306,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iHouse.loginPage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

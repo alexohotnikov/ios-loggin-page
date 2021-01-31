@@ -18,18 +18,21 @@ struct ContentView: View {
     
     @State var autedDidFail: Bool = false
     @State var autedDidSuccess: Bool = false
+
+    
     var body: some View {
         ZStack {
             VStack {
-                HelloText()
+                HelloText(username: $username)
                 UserImage()
                 UserNameTextField(username: $username)
                 SecuryPassword(password: $password)
-                if autedDidFail {
+                
+                
                     Text("Information not correct")
                         .foregroundColor(.red).offset(y: -10)
-                        
-                }
+                        .opacity(autedDidFail ? 1 : 0)
+                        .animation(.easeInOut(duration: 0.34 ))
                 
                 Button(action: {
                     if self.username == usernameRoot && self.password == passwordRoot {
@@ -43,15 +46,16 @@ struct ContentView: View {
                 }
             }
             .padding()
-            if autedDidSuccess {
                 Text("Loggin successful!")
                     .font(.headline)
                     .frame(width: 250, height: 50)
                     .foregroundColor(.white)
                     .background(Color.yellow)
                     .cornerRadius(20.0, antialiased: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-                    .animation(Animation.default)
-            }
+                    .opacity(autedDidSuccess ? 1 : 0)
+                    .animation(.easeInOut(duration: 0.25 ))
+                    .padding(.bottom, 15)
+            
         }
     }
 }
@@ -64,8 +68,9 @@ struct ContentView_Previews: PreviewProvider {
 
 
 struct HelloText: View {
+    @Binding var username: String
     var body: some View {
-        Text("Hello, you!")
+        Text("Hello, \(username)")
             .font(.largeTitle)
             .fontWeight(.bold)
             .padding(.bottom, 20)
